@@ -2,17 +2,14 @@ import Google from "@/components/logo/google";
 import Kakao from "@/components/logo/kakao";
 import Naver from "@/components/logo/naver";
 
-export default function SocialLoginButton(props: { type: string }) {
-  switch (props.type) {
-    case "NAVER":
-      return <NaverButton />;
-    case "KAKAO":
-      return <KakaoButton />;
-    case "GOOGLE":
-      return <GoogleButton />;
-    default:
-      return <div></div>;
-  }
+export default function SocialLoginButtons() {
+  return (
+    <div className="w-full flex justify-center items-center place-items-center">
+      <NaverButton />
+      <KakaoButton />
+      <GoogleButton />
+    </div>
+  );
 }
 
 function NaverButton() {
