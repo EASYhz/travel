@@ -1,5 +1,6 @@
 import Logo from "@/components/logo/logo";
 import Link from "next/link";
+import SocialLoginButton from "./socialLoginButton";
 
 export default function LoginBox() {
   return (
@@ -41,12 +42,18 @@ export default function LoginBox() {
                     Forgot password?
                   </a>
                 </div>
-                <button
-                  type="submit"
-                  className="w-full text-white bg-main-blue hover:bg-etc-blue focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-                >
+                <button type="submit" className="user-button">
                   Sign in
                 </button>
+                <div className="my-4 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-main-blue after:mt-0.5 after:flex-1 after:border-t after:border-main-blue">
+                  <p className="mx-4 mb-0 text-center font-semibold">OR</p>
+                </div>
+                <div className="w-full flex justify-center items-center place-items-center">
+                  <SocialLoginButton type="NAVER" />
+                  <SocialLoginButton type="KAKAO" />
+                  <SocialLoginButton type="GOOGLE" />
+                </div>
+
                 <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                   Don’t have an account yet?{" "}
                   <Link

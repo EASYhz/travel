@@ -12,6 +12,9 @@ module.exports = {
         "main-blue": "#4682A9",
         "sub-blue": "#91C8E4",
         "etc-blue": "#749BC2",
+        naver: "#03C75A",
+        kakao: "#FEE500",
+        google: "#FFFFFF",
       },
       // backgroundImage: {
       //   'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
