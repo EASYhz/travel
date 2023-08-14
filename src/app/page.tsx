@@ -1,3 +1,10 @@
+import CardView from "@/components/home/cardView";
+import MainPage from "@/components/home/mainPage";
+
 export default function Home() {
-  return <div>메인페이지임</div>;
+  return (
+    <div>
+      <MainPage />
+    </div>
+  );
 }

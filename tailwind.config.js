@@ -16,6 +16,9 @@ module.exports = {
         kakao: "#FEE500",
         google: "#FFFFFF",
       },
+      gridAutoColumns: {
+        "2fr": "minmax(0, 2fr)",
+      },
       // backgroundImage: {
       //   'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       //   'gradient-conic':

@@ -4,6 +4,6 @@
 
 @layer components {
   .header-menu {
-    @apply flex-grow-0 flex-shrink-0 text-base text-center text-[#486284];
+    @apply flex-grow-0 flex-shrink-0 text-base text-center text-etc-blue z-50;
   }
 }
