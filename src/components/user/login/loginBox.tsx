@@ -1,39 +1,10 @@
 import Logo from "@/components/logo/logo";
-import { Menu } from "@/interfaces/user/login";
+import { Menu } from "@/types/types";
 import Link from "next/link";
 import LoginForm from "./loginForm";
 import SocialLoginButtons from "./socialLoginButtons";
 
 export default function LoginBox() {
-  const loginMenuList: Array<Menu> = [
-    {
-      menuType: "아이디 찾기",
-    },
-    {
-      menuType: "비밀번호 찾기",
-    },
-    {
-      menuType: "회원가입",
-      linkUrl: "/user/join",
-    },
-  ];
-  const loginMenu: JSX.Element[] = loginMenuList.map((el, index) => (
-    <div key={index}>
-      <Link
-        href={el.linkUrl !== undefined ? el.linkUrl : "#"}
-        key={el.menuType}
-      >
-        <span className="text-sm mx-3 font-medium text-primary-600 hover:underline ">
-          {el.menuType}
-        </span>
-      </Link>
-      {index !== loginMenuList.length - 1 ? (
-        <div className="divider" />
-      ) : (
-        <div />
-      )}
-    </div>
-  ));
   return (
     <div>
       {/* <section className="bg-gray-50 dark:bg-gray-900"> */}
@@ -46,7 +17,7 @@ export default function LoginBox() {
               </h1>
               <LoginForm />
               <div className="flex items-center justify-center">
-                {loginMenu}
+                <LoginMenu />
               </div>
               <div className="my-4 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-main-blue after:mt-0.5 after:flex-1 after:border-t after:border-main-blue">
                 <p className="mx-4 mb-0 text-center font-semibold">OR</p>
@@ -57,5 +28,36 @@ export default function LoginBox() {
         </div>
       </section>
     </div>
+  );
+}
+
+function LoginMenu() {
+  const loginMenuList: Menu[] = [
+    {
+      label: "아이디 찾기",
+    },
+    {
+      label: "비밀번호 찾기",
+    },
+    {
+      label: "회원가입",
+      href: "/user/join",
+    },
+  ];
+  return (
+    <>
+      {loginMenuList.map((el, index) => {
+        return (
+          <div key={el.label}>
+            <Link href={el.href !== undefined ? el.href : ""} key={el.label}>
+              <span className="text-sm mx-3 font-medium text-primary-600 hover:underline ">
+                {el.label}
+              </span>
+            </Link>
+            {index !== loginMenuList.length - 1 && <div className="divider" />}
+          </div>
+        );
+      })}
+    </>
   );
 }
