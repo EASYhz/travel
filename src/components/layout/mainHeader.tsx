@@ -3,11 +3,11 @@ import Link from "next/link";
 /* 메인 헤더 */
 export default function MainHeader() {
   return (
-    <div className="flex w-full justify-between items-center h-16 fixed overflow-hidden px-[98px] py-2 bg-white border-t-0 border-r-0 border-b border-l-0 border-[#dee5ed]">
+    <div className="flex w-full justify-between items-center h-16 fixed overflow-hidden px-96 py-2 bg-white border-t-0 border-r-0 border-b border-l-0 border-[#dee5ed]">
       {/* TODO : border 색상 변경 */}
       <Link href="/">
         <div className="flex-grow-0 items-center flex-shrink-0 w-[109px] h-6">
-          <p className="absolute left-[98px] text-xl font-bold text-left text-[#7b95b7]">
+          <p className="absolute left-96 text-xl font-bold text-left text-[#7b95b7]">
             Title
           </p>
         </div>
