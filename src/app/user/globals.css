@@ -9,4 +9,7 @@
   .social-button {
     @apply mb-3 w-10 h-10 mx-3 flex items-center justify-center rounded-full px-3 pb-2.5 pt-3 text-center text-sm font-medium uppercase leading-normal text-white transition duration-150 ease-in-out;
   }
+  .divider {
+    @apply inline-block h-2.5 w-px self-stretch bg-main-blue opacity-100;
+  }
 }
