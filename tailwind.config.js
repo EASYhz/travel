@@ -16,6 +16,9 @@ module.exports = {
         kakao: "#FEE500",
         google: "#FFFFFF",
       },
+      screens: {
+        xs: "300px",
+      },
       gridAutoColumns: {
         "2fr": "minmax(0, 2fr)",
       },
