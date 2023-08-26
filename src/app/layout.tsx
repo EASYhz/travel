@@ -13,10 +13,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head></head>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
       <body>
         <MainHeader />
-        <div className="pt-16  md:px-12 lg:px-48 ">{children}</div>
+        <div className="pt-16  md:mx-12 lg:mx-48">{children}</div>
       </body>
     </html>
   );
