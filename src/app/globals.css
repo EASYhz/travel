@@ -10,4 +10,8 @@
   .default-button {
     @apply text-main-blue hover:text-main-white border border-main-blue hover:bg-main-blue focus:ring-4 focus:outline-none focus:ring-sub-blue font-medium rounded-2xl text-sm px-5 py-2.5 text-center mr-2 mb-2;
   }
+
+  .main-divider {
+    @apply my-4 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-main-blue after:mt-0.5 after:flex-1 after:border-t after:border-main-blue;
+  }
 }

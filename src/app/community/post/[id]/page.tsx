@@ -1,3 +1,6 @@
+import CommentBox from "@/components/community/post/commentBox";
+import CommentField from "@/components/community/post/commentField";
+
 export default function Post(props: { params: { id: number } }) {
   const detailPost: string = "글 내용임 \n여기 추천합니다.";
   return (
@@ -20,6 +23,10 @@ export default function Post(props: { params: { id: number } }) {
           alt=""
         />
       </article>
+      <div className="main-divider mt-20" />
+      <div>
+        <CommentField />
+      </div>
     </div>
   );
 }
