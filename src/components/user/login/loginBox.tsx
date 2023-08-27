@@ -1,5 +1,5 @@
 import Logo from "@/components/logo/logo";
-import { Menu } from "@/types/types";
+import { Menu } from "@/types/menuTypes";
 import Link from "next/link";
 import LoginForm from "./loginForm";
 import SocialLoginButtons from "./socialLoginButtons";
@@ -19,7 +19,7 @@ export default function LoginBox() {
               <div className="flex items-center justify-center">
                 <LoginMenu />
               </div>
-              <div className="my-4 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-main-blue after:mt-0.5 after:flex-1 after:border-t after:border-main-blue">
+              <div className="main-divider">
                 <p className="mx-4 mb-0 text-center font-semibold">OR</p>
               </div>
               <SocialLoginButtons />
