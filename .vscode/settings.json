@@ -1,3 +1,8 @@
 {
-  "cSpell.words": ["KAKAO", "NAVER"]
+  "cSpell.words": [
+    "KAKAO",
+    "NAVER"
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
 }
