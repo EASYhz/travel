@@ -1,9 +1,9 @@
+import { User } from "@/types/types";
 import Link from "next/link";
 import UserHeader from "./userHeader";
 
 /* 메인 헤더 */
-export default function MainHeader() {
-  const isLogin: boolean = true;
+export default function MainHeader(props: { user?: User }) {
   return (
     <div className="flex justify-between items-center h-16 fixed overflow-hidden w-screen md:px-12 lg:px-48 xl:px-48 py-2 bg-white border-t-0 border-r-0 border-b border-l-0 border-[#dee5ed]">
       {/* TODO : border 색상 변경 */}
@@ -20,7 +20,7 @@ export default function MainHeader() {
           <p className="header-menu">Home</p>
         </Link>
         <p className="header-menu">About</p>
-        <UserHeader />
+        <UserHeader user={props.user} />
       </div>
     </div>
   );
