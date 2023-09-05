@@ -1,12 +1,13 @@
 import CommentForm from "./commentForm";
+import { Comment } from "@/types/types";
 
-export default function CommentBox(props: { isReply: boolean }) {
+export default function CommentBox(props: { comment: Comment }) {
   return (
     // <article className="p-6 mb-6 ml-6 lg:ml-12  text-base bg-white rounded-lg "> 댓글의 댓글
     <article
       className={
         "py-6 mb-6 text-base bg-white rounded-lg " +
-        (props.isReply && "ml-6 lg:ml-12")
+        (props.comment.isReply && "ml-6 lg:ml-12 py-0 -mt-6")
       }
     >
       <footer className="flex justify-between items-center mb-2">
@@ -17,11 +18,11 @@ export default function CommentBox(props: { isReply: boolean }) {
               src="https://flowbite.com/docs/images/people/profile-picture-2.jpg"
               alt="Michael Gough"
             />
-            Michael Gough
+            {props.comment.user}
           </p>
           <p className="text-sm text-gray-600">
             <time dateTime="2022-02-08" title="February 8th, 2022">
-              Feb. 8, 2022
+              {props.comment.regDt}
             </time>
           </p>
         </div>
@@ -70,10 +71,7 @@ export default function CommentBox(props: { isReply: boolean }) {
         </div>
       </footer>
       <p className="text-gray-500 dark:text-gray-400">
-        Very straight-to-point article. Really worth time reading. Thank you!
-        But tools are just the instruments for the UX designers. The knowledge
-        of the design tools are as important as the creation of the design
-        strategy.
+        {props.comment.content}
       </p>
       <div className="flex items-center mt-4 space-x-4">
         <button

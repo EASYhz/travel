@@ -11,3 +11,12 @@ export type Post = {
   imgId: number; // url로 변경 예정
   regDt: string;
 };
+
+export type Comment = {
+  id: string;
+  content: string;
+  user: string;
+  regDt: string;
+  isReply: boolean;
+  head?: string;
+};
