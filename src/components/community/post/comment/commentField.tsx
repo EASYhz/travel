@@ -1,3 +1,4 @@
+import { ORDER_DUMMY } from "@/dummy/comment";
 import CommentBox from "./commentBox";
 import CommentForm from "./commentForm";
 
@@ -7,11 +8,11 @@ export default function CommentField() {
       <div className="max-w-2xl">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-lg lg:text-2xl font-bold text-gray-900">
-            댓글 ({DUMMY.length})
+            댓글 ({ORDER_DUMMY.length})
           </h2>
         </div>
         <CommentForm />
-        {DUMMY.map((el, index) => {
+        {ORDER_DUMMY.map((el, index) => {
           return (
             <div key={index}>
               <CommentBox comment={el} />

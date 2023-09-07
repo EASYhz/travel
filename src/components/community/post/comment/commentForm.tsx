@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 
 export default function CommentForm() {
-  const [val, setVal] = useState("");
+  const [val, setValue] = useState("");
   const textAreaRef = useRef<HTMLTextAreaElement>(null);
 
   const resizeTextArea = () => {
@@ -17,7 +17,7 @@ export default function CommentForm() {
   useEffect(resizeTextArea, [val]);
 
   const onChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setVal(e.target.value);
+    setValue(e.target.value);
   };
 
   return (
