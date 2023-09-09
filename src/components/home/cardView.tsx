@@ -28,7 +28,9 @@ export default function CardView(props: { post: Post }) {
             <h5 className="mb-2 text-xl font-medium leading-tight">
               {props.post.title}
             </h5>
-            <p className="">{props.post.detail}</p>
+            <p className="w-32 inline-block overflow-hidden truncate">
+              {props.post.regDt}
+            </p>
           </div>
         </div>
       </section>
