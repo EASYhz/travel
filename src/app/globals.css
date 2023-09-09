@@ -24,4 +24,8 @@
   .divider {
     @apply inline-block h-2.5 w-px self-stretch bg-main-blue opacity-100;
   }
+
+  .card-text-frame {
+    @apply w-32 overflow-hidden truncate;
+  }
 }

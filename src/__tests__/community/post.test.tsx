@@ -13,7 +13,7 @@ describe("글 부분 ", () => {
 describe("댓글 부분 ", () => {
   it("댓글", () => {
     render(<CommentField />);
-    expect(screen.getByText("댓글 (20)")).toBeInTheDocument();
+    expect(screen.getByText("댓글 (6)")).toBeInTheDocument();
   });
 });
 export {};

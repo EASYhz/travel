@@ -7,14 +7,14 @@ export default function PostField(props: { params: { id: number } }) {
     <div className="container mt-10 items-center justify-center mx-auto">
       <h1 className="text-3xl">글 제목임</h1>
       <div className="mt-6 text-xl whitespace-pre-line">{detailPost}</div>
-      <article className="mt-6">
+      <article className="mt-6 w-3/4">
         <img
           className="rounded-t-lg"
           src={`https://tecdn.b-cdn.net/img/new/standard/nature/${props.params.id}.jpg`}
           alt=""
         />
       </article>
-      <article className="mt-6">
+      <article className="mt-6 w-3/4">
         <img
           className="rounded-t-lg"
           src={`https://tecdn.b-cdn.net/img/new/standard/nature/${props.params.id}.jpg`}

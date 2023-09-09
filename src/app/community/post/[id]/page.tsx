@@ -9,7 +9,7 @@ export default function Post(props: { params: { id: number } }) {
   return (
     <div className="flex">
       <PostField params={props.params} />
-      <div className="w-1/5 py-10 hidden xl:block">
+      <div className="w-1/4 py-10 hidden xl:block">
         <CardView
           post={{
             id: "1",
@@ -19,6 +19,7 @@ export default function Post(props: { params: { id: number } }) {
             imgId: 189,
             regDt: "23.08.08 17:23",
           }}
+          size="small"
         />
       </div>
     </div>

@@ -12,6 +12,7 @@ module.exports = {
         "main-blue": "#4682A9",
         "sub-blue": "#91C8E4",
         "etc-blue": "#749BC2",
+        "sub-gray": "#868e96",
         naver: "#03C75A",
         kakao: "#FEE500",
         google: "#FFFFFF",

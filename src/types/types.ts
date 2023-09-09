@@ -1,3 +1,5 @@
+import { ReactJSXElement } from "@emotion/react/types/jsx-namespace";
+
 export type User = {
   name: string;
   token: string;
@@ -19,4 +21,9 @@ export type Comment = {
   regDt: string;
   isReply: boolean;
   head?: string;
+};
+
+export type IconCount = {
+  icon: JSX.Element;
+  count: number;
 };
